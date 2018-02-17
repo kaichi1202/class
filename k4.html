@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>k4</title>
+</head>
+<body>
+<script>
+var a = prompt("1つめの数を入力してください");
+var b = prompt("2つめの数を入力してください");
+a = parseInt(a);
+b = parseInt(b);
+if(isNaN(a) || isNaN(b)){
+	alert("数を入力してください");
+	location.reload();
+}
+var an = [];
+var bn = [];
+var num;
+
+for(var i = 1; i < a; i++){
+	if(a % i == 0){
+		an.push(i);
+	}
+}
+
+for(var i = 1; i < a; i++){
+	if(b % i == 0){
+		bn.push(i);
+	}
+}
+
+for(var i = 0; i < an.length; i++){
+	for(var j = 0; j < bn.length; j++){
+		if(an[i] == bn[j]){
+			num = an[i];
+		}
+	}
+}
+
+document.write(num);
+</script>
+</body>
+</html>
